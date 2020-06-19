@@ -1,10 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TextInput,
+  Navigator,
+} from "react-native";
+import AttendanceList from "./components/attendanceList/attendanceList";
+import AttendanceRatio from "./components/attendanceRatio/AttendanceRatio";
+import TeacherInformation from "./components/TeacherInformation/TeacherInformation";
+import Header from "./components/header/Header";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Header />
+      <TeacherInformation />
+      <AttendanceRatio />
+      <AttendanceList />
     </View>
   );
 }
@@ -12,8 +25,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#0066ff",
+    flexDirection: 'column'
   },
 });
